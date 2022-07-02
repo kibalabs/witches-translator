@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { IRoute, Router, useInitialization } from '@kibalabs/core-react';
+import { EveryviewTracker } from '@kibalabs/everyview-tracker';
 import { Head, KibaApp } from '@kibalabs/ui-react';
 import { ToastContainer } from 'react-toastify';
-import { EveryviewTracker } from '@kibalabs/everyview-tracker'
+import 'react-toastify/dist/ReactToastify.css';
 
 import { GlobalsProvider, IGlobals } from './globalsContext';
 import { HomePage } from './pages/HomePage';
 import { buildAppTheme } from './theme';
-import 'react-toastify/dist/ReactToastify.css';
 
 const theme = buildAppTheme();
 const tracker = new EveryviewTracker('38111f0919f94a899731157c21fefb52', true);
