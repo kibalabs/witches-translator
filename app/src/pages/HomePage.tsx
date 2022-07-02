@@ -86,7 +86,7 @@ export const HomePage = (): React.ReactElement => {
   }, []);
 
   const getShareText = (): string => {
-    return encodeURIComponent('Check out the WTCHS Translator by the guys from @tokenpagexyz https://wtchs.tokenpage.xyz Tኪኒኒ ኚጤየጣ ሢጣሀኪኡካኴ ኳኚ ኒሀኲኲኒኪ ቧሀጣካሀኪኴ #WTCHS');
+    return encodeURIComponent('Can\'t speak WTCH?? ኑጤየየ ኴሃካ 🧙‍♀️ You need the WTCHS Translator by the guys from @tokenpagexyz https://wtchs.tokenpage.xyz 🔥 Tኪኒኒ ኚጤየጣ ሢጣሀኪኡካኴ ኳኚ ኒሀኲኲኒኪ ቧሀጣካሀኪኴ #WTCHS');
   };
 
   return (
