@@ -122,7 +122,7 @@ export const HomePage = (): React.ReactElement => {
         </Stack.Item>
         <Spacing variant={PaddingSize.Wide2} />
         <Button text='Share the love' iconLeft={<KibaIcon iconId='ion-logo-twitter' />} target={`https://twitter.com/intent/tweet?text=${getShareText()}`} />
-        <Footer />
+        <Footer tokenPageReferral='wtchs' />
       </Stack>
     </ResponsiveContainingView>
   );
