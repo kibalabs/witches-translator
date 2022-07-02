@@ -78,7 +78,7 @@ export const HomePage = (): React.ReactElement => {
 
   const onOutputTextChanged = React.useCallback((input: string): void => {
     setOutputText(input);
-    let output = input;
+    let output = input.toLowerCase();
     Object.keys(FORWARD_KEY).forEach((key: string): void => {
       output = output.replaceAll(key, FORWARD_KEY[key]);
     });
