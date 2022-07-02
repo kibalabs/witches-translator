@@ -2,7 +2,7 @@
 const InjectSeoPlugin = require('@kibalabs/build/scripts/plugins/injectSeoPlugin');
 
 const title = 'WTCHS Translator';
-const description = 'The un-official translator for WTCHS NFT';
+const description = 'The un-official translator for WTCHS NFT <> ኲኑኪ የኡ-ጤሢሢሀሣሀሃኒ ኲጣሃኡኴኒሃኲጤጣ ሢጤጣ የየኲሣኑኴ ኡሢኲ';
 const url = 'https://wtchs.tokenpage.xyz'
 const imageUrl = `${url}/assets/banner.png`;
 

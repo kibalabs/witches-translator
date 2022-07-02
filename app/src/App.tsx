@@ -1,24 +1,30 @@
 import React from 'react';
 
-import { IRoute, Router } from '@kibalabs/core-react';
+import { IRoute, Router, useInitialization } from '@kibalabs/core-react';
+import { EveryviewTracker } from '@kibalabs/everyview-tracker';
 import { Head, KibaApp } from '@kibalabs/ui-react';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { GlobalsProvider, IGlobals } from './globalsContext';
 import { HomePage } from './pages/HomePage';
 import { buildAppTheme } from './theme';
-import 'react-toastify/dist/ReactToastify.css';
 
 const theme = buildAppTheme();
-// const tracker = new EveryviewTracker('da82fef72d614762b253d0bfe0503226', true);
+const tracker = new EveryviewTracker('38111f0919f94a899731157c21fefb52', true);
 
-const globals: IGlobals = {
+export const globals: IGlobals = {
 };
 
+export const routes: IRoute<IGlobals>[] = [
+  { path: '/', page: HomePage },
+];
+
 export const App = (): React.ReactElement => {
-  const routes: IRoute<IGlobals>[] = [
-    { path: '/', page: HomePage },
-  ];
+  useInitialization((): void => {
+    tracker.initialize();
+    tracker.trackApplicationOpen();
+  });
 
   return (
     <KibaApp theme={theme} background={{ layers: [{ imageUrl: '/assets/background.jpeg' }, { linearGradient: 'rgb(0, 0, 0, 0.1), rgb(25, 24, 37, 0.9)' }] }}>
